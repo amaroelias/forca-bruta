@@ -1,7 +1,7 @@
 public class Permutation {
 
     public static void func_print(int[] p, int sz) {
-        System.out.println();
+        System.out.println("\n");
 
         for (int i = 0; i < sz; ++i) {
             System.out.printf(" %2d", p[i]);
@@ -16,7 +16,6 @@ public class Permutation {
     }
 
     public static void func_permHeap(int sz, int[] p, int n) {
-
         if (n == 1) {
             func_print(p, sz);
             return;
@@ -24,8 +23,7 @@ public class Permutation {
 
         func_permHeap(sz, p, n - 1);
 
-        for (int i = 0; i < (n - 1); ++i) {
-
+        for (int i = 0; i < n - 1; ++i) {
             if (n % 2 == 0) {
                 func_exch(p, i, n - 1);
             } else {
@@ -35,7 +33,6 @@ public class Permutation {
             func_permHeap(sz, p, n - 1);
 
         }
-
     }
 
     public static void func_perm(int sz, int[] p, int n) {
